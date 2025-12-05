@@ -8,9 +8,9 @@
 - Project Overview  
 - Motivation  
 - Data Sources  
-- Research Questions & Hypotheses  
-- Methodology  
-- Analysis Plan
+- Data Collection and Preparation
+- Research Questions and Hypothesis
+- Methodology
 
 ---
 
