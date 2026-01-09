@@ -1,21 +1,12 @@
-# Heavy-Bet Study — Football Odds vs Results  
+# Whistles or Whispers - Betting Market Anomaly Study 
 **Selected Major Leagues · Selected Seasons · Calibration & Line‑Movement Analysis**
 
 
 ## Project Overview
-This project examines how pre‑match betting expectations relate to actual match outcomes in selected major European football leagues. We focus on whether teams that receive strong market support (proxied by opening→closing line movement) meet, exceed, or underperform their final implied probabilities.
 
-Because actual betting volume is not public, we use line movement as a practical proxy for the “heavily‑backed side.” Data comes from Football‑Data.co.uk (results + opening odds) and multi‑bookmaker closing odds (BTB). Coverage includes England (E0–E3), Germany (D1), France (F1), and Italy (I1) for the seasons available under `raw/Football-Data/`.
+Football betting markets are among the largest and most liquid markets in the world, with billions of dollars wagered every day across leagues, bookmakers, and exchanges. Acording to 2025 estimates, only in Turkey, approximately 60 million USD is wagered daily through legal bookmakers, supported by a base of over 15 million active bettors. These figures alone highlight the extraordinary scale, liquidity, and influence of betting markets to people. 
 
-The central research question is: **Do teams that receive strong betting market support before kick‑off underperform relative to their final implied probabilities?**
-
-We address this with a reproducible pipeline:
-- collect and merge match results with opening and closing odds,
-- convert odds to (vig‑free) implied probabilities,
-- quantify line movement and identify heavily‑backed sides,
-- evaluate calibration and test hypotheses comparing expected vs. realized outcomes.
-
-We do not claim wrongdoing or intentional underperformance. The goal is a transparent, data‑driven assessment of how well betting markets anticipate results and whether heavily‑backed teams deviate meaningfully from expectations.
+ With this kind of money attraction, betting markets attracts to many suspissions and speculations to itself too. So i wanted to research one of these suspissions, are there any relations with high 
 
 ## Motivation
 
