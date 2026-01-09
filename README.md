@@ -8,9 +8,7 @@ Football betting markets are among the largest and most liquid markets in the wo
 
  With this kind of money attraction, betting markets attracts to many suspissions and speculations to itself too. So i wanted to research one of these suspissions, are there any relations with high 
 
-## Motivation
 
-Betting markets synthesize information quickly, but their relationship to realized outcomes is not perfect. Exploring opening vs. closing odds, how bettors react to new information, and whether those signals align with on‑field results can shed light on market efficiency, calibration, and biases. A concise, data‑driven analysis helps move the discussion from speculation to measurable evidence and improves transparency around what odds do—and don’t—tell us about match outcomes.
 
 # Data Collection & Preparation 
 -----------------------------------------------
