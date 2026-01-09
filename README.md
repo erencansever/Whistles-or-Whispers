@@ -66,21 +66,24 @@ Betting markets synthesize information quickly, but their relationship to realiz
 ## 2) Hypothesis Testing
 
 Hypothesis:
-
-H₀ (Null): There is no association between line movement (ΔProbability) and the heavy‑backed side winning.
-H₁ (Alternative): As ΔProbability increases, the probability that the heavy‑backed side wins increases (positive association).
+H₀ (Null): Heavy favourites' match outcomes follow expected patterns based on market probabilities. (Y_i ~ Bernoulli(p_i), where p_i = pFav_win)
+H₁ (Alternative): Heavy favourites perform significantly different than market expectations
 
 Method:
+**Monte Carlo Simulation** - Simulated 20.000 iterations for heavy favorites with significance level of α = 0.05
+Results: Failed to reject H₀ 
 
-- Primary: Logistic regression HeavySide_Won ~ ΔProbability (with optional league/season fixed effects). Assess the ΔProbability coefficient via Wald test at α = 0.05.
-- Robustness: Point‑biserial (Pearson) correlation between ΔProbability and HeavySide_Won; Spearman rank correlation as a non‑parametric check.
-- Secondary calibration check: Paired comparison of opening vs. closing performance (Brier score / log‑loss) per match.
+Method:
+**Goodnes of Fit Test** - Measured deviation between observed and expected frequencies with significance level of α = 0.05
+Results: Failed to reject H₀ 
 
-Results:
+Hypothesis - (Closing Odds):
+H₀ (Null): The empirical distribution of favorite wins follows the theoretical distribution based on market closing probabilities
+H₁ (Alternative): The empirical distribution significantly differs from the theoretical distribution
 
-- To be filled after execution. We will report β₁ (log‑odds), odds ratio (OR = e^{β₁}), 95% CI, and p‑value for ΔProbability.
-- Decision rule: Reject H₀ if p < 0.05.
-- For calibration, report Δ(Brier, log‑loss) with bootstrap CIs and a brief interpretation.
+Method:
+**Kolmogorov-Smirnov Test** - Two-sample Kolmogorov-Smirnov test applied to compare empirical vs theoretical distributions with significance level of α = 0.05
+Result: Failed to reject H₀ 
 
 # Machine Learning Model 
 
