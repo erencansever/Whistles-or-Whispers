@@ -53,11 +53,11 @@ The relationship between betting market expectations and actual football match o
 
 **Usage in this project:**
 
-- Serves as the **primary match results dataset**  
+- Serves as one of the two core datasets of this project
 - Provides **opening odds** needed to compute initial implied probabilities  
-- Used to build the foundation of the merged dataset (team names, leagues, dates)
+- Used to build the foundation of the merged dataset (team names, leagues, dates, openning odds, closing odds)
 
-This dataset is clean, standardized, and covers major European leagues.
+This dataset is not clean, not standardized, and covers major European leagues
 
 
 
@@ -73,12 +73,12 @@ This dataset is clean, standardized, and covers major European leagues.
 
 **Usage in this project:**
 
-- Provides **closing odds**, essential for line-movement analysis  
-- Enables identification of the **“heavily-backed” side**  
+- Second core dataset of this project
+- Provides **closing odds**, essential for line-movement analysis
 - Allows comparison of opening vs closing implied probabilities  
-- Used to test market efficiency and bias
-
-This dataset fills the gap that Football-Data.co.uk lacks (closing odds).
+- Enables identification of the **“heavily-backed” side** on **heavily-played** matches
+ 
+This dataset fills the gap that Football-Data.co.uk lacks (closing odds), and again not clean nor standardized.
 
 ---
 ## Data Collection and Preparation
@@ -89,14 +89,14 @@ This dataset fills the gap that Football-Data.co.uk lacks (closing odds).
 - Converted all date fields to a consistent `datetime` format.  
 - Filtered matches to include only the six major European leagues and the selected three seasons.  
 - Removed rows with missing or inconsistent odds values (e.g., missing home/draw/away odds).  
-- Eliminated impossible or erroneous entries such as negative odds or matches duplicated across bookmakers.  
+- Eliminated impossible or erroneous entries, such as negative odds or matches duplicated across bookmakers.  
 
 
 
 ### 2. Aggregation & Integration
 
 - **Football-Data.co.uk:** Extracted match results and opening odds as the base dataset.  
-- **Beat-the-Bookie:** Extracted multi-bookmaker opening and closing odds to capture line movement.  
+- **Beat-the-Bookie:** Extracted multi-bookmaker closing odds to capture line movement.  
 - Created a canonical match index using *(date, home team, away team)* as the join key.  
 - Merged datasets on this index to produce a unified structure containing:  
   - match results  
@@ -124,16 +124,6 @@ This dataset fills the gap that Football-Data.co.uk lacks (closing odds).
 
 
 
-### 4. Data Enrichment
-
-- Integrated bookmaker metadata to examine pricing consistency across firms.  
-- Added league-level contextual variables (e.g., average goals per league per season).  
-- Derived match difficulty indicators such as  
-  - relative team strength (computed through rolling win percentages).  
-- Enriched the dataset with temporal features:  
-  - `Season`  
-  - `Matchday`  
-  - `WeekOfYear`  
-- Resulted in a more comprehensive dataset suitable for calibration studies, statistical testing, and ML modeling.  
+### 4. EDA
 
 ---
