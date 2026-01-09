@@ -87,19 +87,19 @@ Result: Failed to reject H₀
 
 # Machine Learning Model 
 
-- Goal: predict `HeavySide_Won` for heavy favorites.
-- Data: merges `processed/average_opening_odds_group1.csv` and `processed/average_closing_odds_group1.csv` on `(HomeTeam, AwayTeam, Date, league)`; rows with missing odds are dropped.
-- Heavy favorite filter: favorite opening odds < 1.40 (configurable).
-- Label: `HeavySide_Won = 1` if the opening favorite (H/A) matches the final result (`FTR`), else 0.
-- Features:
+- **Goal:** predict `HeavySide_Won` for heavy favorites.
+- **Data:** merges `processed/average_opening_odds_group1.csv` and `processed/average_closing_odds_group1.csv` on `(HomeTeam, AwayTeam, Date, league)`; rows with missing odds are dropped.
+- **Heavy favorite filter:** favorite opening odds < 1.40 (configurable).
+- **Label:** `HeavySide_Won = 1` if the opening favorite (H/A) matches the final result (`FTR`), else 0.
+- **Features:**
 	- `pFav_open`, `pFav_close`, `delta_pFav = pFav_close − pFav_open`,
 	- `overround_open`, `overround_close`,
 	- league dummies derived from `league` (drop-first encoding).
-- Preprocessing: implied probs computed from odds with overround normalization; optional row sampling (`sample_size`) for fast runs.
-- Train/test: stratified 75/25 split (`random_state=42`).
-- Model: Logistic Regression (L2, `liblinear`, `class_weight='balanced'`).
-- Metrics: AUC, Brier score, Accuracy, positive class rate, and learned coefficients (saved to `reports/baseline_upset_model_metrics.txt`).
-- Config via env vars: `OPENING_CSV`, `CLOSING_CSV`, `HEAVY_FAV_THRESHOLD`, `SAMPLE_SIZE`, `SEED`.
+- **Preprocessing:** implied probs computed from odds with overround normalization; optional row sampling (`sample_size`) for fast runs.
+- **Train/test:** stratified 75/25 split (`random_state=42`).
+- **Model:** Logistic Regression (L2, `liblinear`, `class_weight='balanced'`).
+- **Metrics:** AUC, Brier score, Accuracy, positive class rate, and learned coefficients (saved to `reports/baseline_upset_model_metrics.txt`).
+- **Config via env vars:** `OPENING_CSV`, `CLOSING_CSV`, `HEAVY_FAV_THRESHOLD`, `SAMPLE_SIZE`, `SEED`.
 
 
 # Limitations and Future Work
