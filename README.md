@@ -6,7 +6,7 @@
 
 Football betting markets are among the largest and most liquid markets in the world, with billions of dollars wagered every day across leagues, bookmakers, and exchanges. Acording to 2025 estimates, only in Turkey, approximately 60 million USD is wagered daily through legal bookmakers, supported by a base of over 15 million active bettors. These figures alone highlight the extraordinary scale, liquidity, and influence of betting markets to people. 
 
- With this kind of money attraction, betting markets attracts to many suspissions and speculations to itself too. So i wanted to research one of these suspissions; when big clubs like Real Madrid plays with much much smaller clubs, obviosuly Real Madrid is the favorite and nearly every betmaker plays for them and most of the time wins.  
+ With this kind of money attraction, betting markets attracts to many suspissions and speculations to itself too. So i wanted to research one of these suspissions; when big clubs like Real Madrid plays with much much smaller clubs, obviosuly Real Madrid is the favorite and nearly every betmaker plays for them and most of the time wins.  The key question is: " Are those heavy favorites loses the games susspiciously ? "
 
 
 # Data Collection & Preparation 
