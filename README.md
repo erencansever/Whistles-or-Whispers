@@ -1,5 +1,5 @@
 <p align="center">
-  <strong>Whistles or Whispers</strong><br>
+##<strong>Whistles or Whispers</strong><br>
   <span style="color: #6c757d;">Betting Market Anomaly Study</span>
 </p>
 
